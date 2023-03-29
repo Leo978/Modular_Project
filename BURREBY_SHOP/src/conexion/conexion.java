@@ -10,10 +10,10 @@ public class conexion {
     public Connection conexion (){
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            conectar = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/enfermedades", "root", "");
-            //JOptionPane.showMessageDialog(null, "CONEXION EXITOSA");
+            conectar = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/burreby", "root", "");
+            //JOptionPane.showMessageDialog(null, "CONEXION");
         }catch(Exception e){
-            JOptionPane.showMessageDialog(null, "CONEXION ERRONEA" + e.getMessage());
+            JOptionPane.showMessageDialog(null, "ERROR" + e.getMessage());
         }
         return conectar;
     }
